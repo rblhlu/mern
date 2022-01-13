@@ -40,10 +40,10 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
-    Employee_name: req.body.Employee_name,
-    Employee_dob: req.body.Employee_dob,
-    Employee_gender: req.body.Employee_gender,
-    Employee_salary: req.body.Employee_salary,
+    name: req.body.name,
+    dob: req.body.dob,
+    gender: req.body.gender,
+    salary: req.body.salary,
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -57,10 +57,10 @@ recordRoutes.route("/update/:id").post(function (req, response) {
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
     $set: {
-      Employee_name: req.body.Employee_name,
-      Employee_dob: req.body.Employee_dob,
-      Employee_gender: req.body.Employee_gender,
-      Employee_salary: req.body.Employee_salary,
+      name: req.body.name,
+      dob: req.body.dob,
+      gender: req.body.gender,
+      salary: req.body.salary,
     },
   };
   db_connect
