@@ -43,7 +43,7 @@ export default function Create() {
  // This following section will display the form that takes the input from the user.
  return (
    <div>
-     <h3>Create New Record</h3>
+     <h3>Create New Employee Record</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="name">Name</label>
@@ -56,7 +56,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="dob">dob</label>
+         <label htmlFor="dob">DOB</label>
          <input
            type="date"
            className="form-control"
@@ -104,7 +104,7 @@ export default function Create() {
        <div className="form-group">
          <input
            type="submit"
-           value="Create Employee"
+           value="Create New Employee"
            className="btn btn-primary"
          />
        </div>
